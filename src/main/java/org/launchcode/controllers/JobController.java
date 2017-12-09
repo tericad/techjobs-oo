@@ -64,10 +64,7 @@ public class JobController {
 
         jobData.add(newJob);
 
-        Job requestedJob = jobData.findById(newJob.getId());
-
-        model.addAttribute("requestedJob", requestedJob);
-        return "job-detail";
+        return "redirect:/job?id="+ newJob.getId();
 
     }
 }
